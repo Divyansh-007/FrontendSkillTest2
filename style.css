@@ -62,3 +62,95 @@ body{
     color: orangered;
     border: 1px solid orangered;
 }
+
+/* search results */
+#search_results{
+    height: auto;
+    width: auto;
+    margin: 2% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* meal card */
+
+.meal_card{
+    height: 25rem;
+    width: 20rem;
+    border-radius: 15px;
+}
+
+.meal_card .img_container{
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.meal_card .info{
+    height: 30%;
+    background-color: white;
+    border-radius: 0 0 15px 15px;
+}
+
+.meal_card .info .name_n_type{
+    position: relative;
+    top: 5%;
+    left: 2%;
+    /* margin-top: 0px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    width: 95%;
+}
+
+.meal_card .info .name_n_type .meal_name{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.meal_card .info .name_n_type .veg{
+    height: 18px;
+    width: 18px;
+    border: 1px solid green;
+}
+
+.meal_card .info .name_n_type .veg p{
+    margin: 1px;
+    text-align: center;
+}
+
+.meal_card .info .name_n_type .veg p i{
+    color: green;
+}
+
+.meal_card .info .cuisine{
+    position: relative;
+    left: 2%;
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-top: 1%;
+}
+
+.meal_card .info .fav_btn{
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
