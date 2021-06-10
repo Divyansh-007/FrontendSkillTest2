@@ -149,6 +149,14 @@ body {
   border: 1px solid cornflowerblue;
 }
 
+/* favourite meals list */
+
+#fav_heading{
+  font-size: 2rem;
+  text-align: center;
+  color: floralwhite;
+}
+
 /* customizing scrollbar */
 
 ::-webkit-scrollbar {
