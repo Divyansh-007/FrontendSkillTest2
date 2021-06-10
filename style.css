@@ -38,7 +38,7 @@ body{
     justify-content: space-between;
 }
 
-#search_container .meal{
+#search_container #meal{
     border: none;
     outline: none;
     font-size: 2rem;
@@ -46,7 +46,7 @@ body{
     border-radius: 15px;
 }
 
-#search_container .search_btn{
+#search_container #search_btn{
     font-size: 1.5rem;
     padding: 10px;
     border-radius: 15px;
@@ -57,7 +57,7 @@ body{
     cursor: pointer;
 }
 
-#search_container .search_btn:hover{
+#search_container #search_btn:hover{
     background-color: white;
     color: orangered;
     border: 1px solid orangered;

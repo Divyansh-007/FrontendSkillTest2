@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/75cf4e84e0.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" type="image/jpg" href="favicon.png">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/75cf4e84e0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
     <title>Meal House</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- heading container -->
     <div id="heading">
-        <h1 class="name"><i class="fas fa-utensils"></i> Meal House <i class="fas fa-utensils"></i></h1>
-        <h3 class="tagline">for foodie in you.....</h3>
+      <h1 class="name">
+        <i class="fas fa-utensils"></i> Meal House
+        <i class="fas fa-utensils"></i>
+      </h1>
+      <h3 class="tagline">for foodie in you.....</h3>
     </div>
 
     <!-- search container -->
     <div id="search_container">
-        <input class="meal" type="text" placeholder="ex: Pasta">
-        <button class="search_btn">Search</button>
+      <input id="meal" type="text" placeholder="ex: Pasta" />
+      <button id="search_btn">Search</button>
     </div>
 
     <!-- search result -->
-    <div>
-        <!-- meal card -->
-    <div id="meal_card">
-        <img class="meal_img" src="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" alt="">
-        <div class="meal_info">
-            <!-- <div class="name_n_type">
-                <p class="meal_name">Spicy Arrabiata Penne</p>
-                <div class="veg">
-                    <p><i class="fas fa-circle"></i></p>
-                </div>
-            </div> -->
-            <p class="meal_name">Spicy Arrabiata Penne</p>
-            <p class="meal_category">Vegetarian</p>
-            <p class="cuisine">Italian</p>
-            <button class="fav_btn">Add to Favourites <i class="far fa-heart"></i></button>
-            <br>
-            <button class="details_btn">View Details <i class="fas fa-arrow-right"></i></button>
-        </div>
-    </div>
-    </div>
+    <div id="search_result"></div>
 
     <script type="text/javascript" src="script.js"></script>
-</body>
+  </body>
 </html>
