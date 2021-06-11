@@ -1,0 +1,66 @@
+/* body */
+
+body {
+  background: #2980b9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #6dd5fa,
+    #2980b9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #6dd5fa,
+    #2980b9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* heading */
+
+#heading {
+  margin: 2% 25%;
+}
+
+#heading .name {
+  font-size: 4rem;
+  font-weight: bold;
+  color: aliceblue;
+  text-align: center;
+  font-family: cursive;
+  margin-bottom: -1rem;
+}
+
+#heading .tagline {
+  font-size: 1.5rem;
+  text-align: end;
+  color: darkred;
+  font-style: italic;
+}
+
+#meal_img {
+  margin: 0 38% 1% 38%;
+  height: 20rem;
+  width: auto;
+  border-radius: 15px;
+}
+
+#meal_name {
+  margin-top: -1rem;
+  font-family: cursive;
+  color: white;
+  text-align: center;
+}
+
+#meal_category {
+  margin-top: -1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#cuisine {
+  margin-top: -1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: oblique;
+}

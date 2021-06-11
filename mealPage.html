@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/75cf4e84e0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/mealPage.css">
     <link rel="shortcut icon" type="image/jpg" href="favicon.png" />
-    <link rel="stylesheet" href="./assets/css/index.css"/>
-    <title>Meal House</title>
+    <title>Document</title>
   </head>
 
   <body>
-
     <!-- heading container -->
     <div id="heading">
       <h1 class="name">
@@ -21,19 +20,11 @@
       <h3 class="tagline">for foodie in you.....</h3>
     </div>
 
-    <!-- search container -->
-    <div id="search_container">
-      <input id="meal" type="text" placeholder="ex: Pasta" />
-      <button id="search_btn">Search</button>
-    </div>
+    <img id="meal_img">
+    <h1 id="meal_name"></h1>
+    <h3 id="meal_category"></h3>
+    <h3 id="cuisine"></h3>
 
-    <!-- search result -->
-    <div id="search_result"></div>
-
-    <!-- favourite meals -->
-    <h2 id="fav_heading">My Favourite Meals</h2>
-    <div id="fav_meals"></div>
-
-    <script type="text/javascript" src="./assets/js/index.js"></script>
+    <script type="text/javascript" src="./assets/js/mealPage.js"></script>
   </body>
 </html>

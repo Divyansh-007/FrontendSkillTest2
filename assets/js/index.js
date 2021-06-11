@@ -1,5 +1,6 @@
 const searchButton = document.getElementById("search_btn");
 const searchResult = document.getElementById("search_result");
+const favMealsList = document.getElementById("fav_meals");
 
 showFavourites();
 
@@ -34,7 +35,7 @@ function fetchMeal(meal) {
                               Add to Favourites <i class="far fa-heart"></i>
                               </button>
                               <br />
-                              <button id="details_btn">
+                              <button id="details_btn" onclick="showDetails(${meal.idMeal})">
                               View Details <i class="fas fa-arrow-right"></i>
                               </button>
                           </div>
@@ -125,8 +126,6 @@ function showFavourites() {
   }
 
   let html = "";
-
-  const favMealsList = document.getElementById("fav_meals");
   favMealsList.innerHTML = html;
 
   mealList.forEach((meal, index) => {
@@ -153,4 +152,9 @@ function showFavourites() {
   });
 
   favMealsList.innerHTML = html;
+}
+
+function showDetails(id){
+  let url = "mealPage.html?id=" + id;
+  window.open(url,"_blank");
 }
