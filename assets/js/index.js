@@ -1,9 +1,12 @@
-const searchButton = document.getElementById("search_btn");
-const searchResult = document.getElementById("search_result");
-const favMealsList = document.getElementById("fav_meals");
+// referencing all the elements
+const searchButton = document.getElementById("search_btn"); // search button
+const searchResult = document.getElementById("search_result"); // search result list
+const favMealsList = document.getElementById("fav_meals"); // favourite meals list
 
+// calling show favourites 
 showFavourites();
 
+// fetching meal with it's name and rendering the details
 function fetchMeal(meal) {
   let xhrRequest = new XMLHttpRequest();
 
@@ -13,6 +16,7 @@ function fetchMeal(meal) {
 
     let meals = responseJSON.meals;
 
+    // iterating over meals from and adding them to the list in html structure
     let html = "";
     searchResult.innerHTML = html;
 
@@ -55,14 +59,23 @@ function fetchMeal(meal) {
     `https://themealdb.com/api/json/v1/1/search.php?s=${meal}`,
     true
   );
+
   xhrRequest.send();
 }
 
+// search a meal on clicking of search button
 searchButton.addEventListener("click", function () {
   let mealName = document.getElementById("meal").value;
   fetchMeal(mealName);
 });
 
+// redirecting to a new page to show details of a meal
+function showDetails(id){
+  let url = "mealPage.html?id=" + id;
+  window.open(url,"_blank");
+}
+
+// adding a meal to favourites list
 function addFavourite(id) {
   let xhrRequest = new XMLHttpRequest();
 
@@ -70,9 +83,9 @@ function addFavourite(id) {
     let responseJSON = JSON.parse(xhrRequest.response);
     console.log(responseJSON);
 
-    let resMeal = responseJSON.meals[0];
+    let resMeal = responseJSON.meals[0]; // fetching meal from response
 
-    let favMeals = localStorage.getItem("favMeals");
+    let favMeals = localStorage.getItem("favMeals"); // fetching favourite meals from local storage
 
     if (favMeals == null) {
       mealList = [];
@@ -80,7 +93,9 @@ function addFavourite(id) {
       mealList = JSON.parse(favMeals);
     }
 
+    // creating a meal object to be added in the list
     let meal = {
+      id: resMeal.idMeal,
       name: resMeal.strMeal,
       category: resMeal.strCategory,
       cuisine: resMeal.strArea,
@@ -103,9 +118,11 @@ function addFavourite(id) {
     `https://themealdb.com/api/json/v1/1/lookup.php?i=${id}`,
     true
   );
+
   xhrRequest.send();
 }
 
+// removing a meal from favourites list
 function removeFavourite(index){
   let favMeals = localStorage.getItem('favMeals');
     let mealList = JSON.parse(favMeals);
@@ -116,8 +133,9 @@ function removeFavourite(index){
     showFavourites();
 }
 
+// showing favourite meals
 function showFavourites() {
-  let favMeals = localStorage.getItem("favMeals");
+  let favMeals = localStorage.getItem("favMeals"); // fetching favourite meals from local storage
 
   if (favMeals == null) {
     mealList = [];
@@ -125,6 +143,7 @@ function showFavourites() {
     mealList = JSON.parse(favMeals);
   }
 
+  // iterating over favourite meals and rendering them
   let html = "";
   favMealsList.innerHTML = html;
 
@@ -144,7 +163,7 @@ function showFavourites() {
                     Remove from Favourites <i class="fas fa-trash-alt"></i>
                     </button>
                     <br />
-                    <button id="details_btn">
+                    <button id="details_btn" onclick="showDetails(${meal.id})">
                     View Details <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
@@ -152,9 +171,4 @@ function showFavourites() {
   });
 
   favMealsList.innerHTML = html;
-}
-
-function showDetails(id){
-  let url = "mealPage.html?id=" + id;
-  window.open(url,"_blank");
 }

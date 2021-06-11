@@ -38,12 +38,16 @@ body {
   font-style: italic;
 }
 
+/* meal image */
+
 #meal_img {
   margin: 0 38% 1% 38%;
   height: 20rem;
   width: auto;
   border-radius: 15px;
 }
+
+/* meal name */
 
 #meal_name {
   margin-top: -1rem;
@@ -52,15 +56,53 @@ body {
   text-align: center;
 }
 
+/* meal category */
+
 #meal_category {
   margin-top: -1rem;
   text-align: center;
   font-size: 1.5rem;
 }
 
+/* cuisine */
+
 #cuisine {
   margin-top: -1rem;
   text-align: center;
   font-size: 1.5rem;
   font-style: oblique;
+}
+
+/* labels */
+
+.labels{
+  margin: 0 0 1% 2%; 
+  font-size: 2rem; 
+  font-weight: bolder;
+}
+
+/* ingredients list */
+
+#ingredient_list {
+  margin: 0 40% 2% 5%;
+  background-color: white;
+  border-radius: 15px;
+  width: auto;
+}
+
+#ingredients {
+  margin: 1%;
+}
+
+/* instructions */
+
+#instruction_container{
+  background-color: white;
+    margin: 1% 5%;
+    border-radius: 15px;
+}
+
+#instruction{
+  margin: 1%;
+  font-size: 1.5rem;
 }
