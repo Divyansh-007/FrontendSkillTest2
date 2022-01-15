@@ -1,6 +1,6 @@
 # Meal House
 
-<b>Link</b>: https://divyansh-007.github.io/FrontendSkillTest2/
+<b>Link</b>: https://divyansh-007.github.io/Meal-House/
 
 An application to get details about a meal you like and search.
 
